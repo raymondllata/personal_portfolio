@@ -9,9 +9,33 @@
  * https://github.com/sanity-io/next-sanity
  */
 
-import { NextStudio } from 'next-sanity/studio'
-import config from '../../../../sanity.config'
+
+import { useEffect } from 'react';
+import { createClient } from '@sanity/client';
+
+const config = {
+  // Your Sanity.io project configuration goes here
+  // For example:
+  projectId: 'your-sanity-project-id',
+  dataset: 'your-sanity-dataset',
+  // Add other configuration options as needed
+};
 
 export default function StudioPage() {
-  return <NextStudio config={config} />
+  useEffect(() => {
+    // Initialize the Sanity client with your project configuration
+    const client = createClient(config);
+
+    // Fetch data from Sanity using the client here if needed
+    // For example:
+    // client.fetch('*[_type == "yourSanityType"]')
+    //   .then(data => {
+    //     console.log(data);
+    //   })
+    //   .catch(error => {
+    //     console.error('Error fetching data:', error);
+    //   });
+  }, []);
+
+  return <div>This is your Sanity Studio page.</div>;
 }

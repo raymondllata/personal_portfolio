@@ -1,7 +1,7 @@
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
-import BackgroundCircles from './BackgroundCircles';
-import linkedinimage from '../images/linkedinheadshot.jpeg'
+import BackgroundCircles from './BackgroundCircles'
+import linkedinimage from 'images/linkedinheadshot.jpeg'
 import Image from 'next/image'
 import Link from 'next/link'
 
