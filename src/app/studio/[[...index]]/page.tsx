@@ -11,7 +11,7 @@
 
 
 import { useEffect } from 'react';
-import { createClient } from '@sanity/client';
+import createClient from '@sanity/client';
 
 const config = {
   // Your Sanity.io project configuration goes here
