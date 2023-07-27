@@ -1,10 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { Project } from '@/typings';
+import { urlFor } from '@/sanity';
 
-type Props = {}
+type Props = {
+    projects: Project[]
+}
 
-export default function Projects({}: Props) {
-    const projects = [1, 2, 3, 4, 5];
+export default function Projects({ projects }: Props) {
   return (
     <motion.div 
     initial={{ opacity: 0}}
@@ -17,11 +20,12 @@ export default function Projects({}: Props) {
 
         <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 
         scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7Ab0A]/80">
-            {projects.map((project, i) => (
+            {projects?.map((project, i) => (
                 <div 
                 
                 className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                     <motion.img
+                        style={{ width: 'auto', height: '300px' }}
                         initial={{
                             y:-300,
                             opacity: 0
@@ -29,15 +33,23 @@ export default function Projects({}: Props) {
                         transition={{ duration: 1.2 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        src="https://avatars.githubusercontent.com/u/17177659?s=280&v=4" alt="" />
+                        src={urlFor(project.image).url()} alt="" />
                 <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                     <h4 className="text-4xl font-semibold text-center">
-                        <span className='underline decoration-[#F7AB0A]/50'>Case Study {i + 1} of {projects.length}:</span> UPS clone
+                        <span className='underline decoration-[#F7AB0A]/50'>Project {i + 1} of {projects.length}:</span> {project?.title}
                     </h4>
-
+                    <div className="flex items-center space-x-2 justify-center ">
+                {project?.technologies.map((technology) => (
+                  <img
+                    key={technology._id}
+                    className="h-10 w-10 border-2 border-gray-500 rounded-full object-cover"
+                    src={urlFor(technology?.image).url()}
+                    alt=""
+                  />
+                ))}
+              </div>
                     <p className='text-lg text-center md:text-left'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            
+                    {project?.summary}
                     </p>
                 </div>
                 </div>

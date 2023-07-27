@@ -4,13 +4,17 @@ import BackgroundCircles from './BackgroundCircles'
 import linkedinimage from 'images/linkedinheadshot.jpeg'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PageInfo } from '@/typings'
+import { urlFor } from '@/sanity'
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo;
+}
 
-export default function Hero({}: Props) {
+export default function Hero({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
-            "Hi, my name's Raymond", 
+            `Hi, my name's ${pageInfo?.name}`, 
             "I love to build",
             "<BlankText />",
         ],
@@ -24,7 +28,7 @@ export default function Hero({}: Props) {
         <div className="relative">
             <Image 
                 className="rounded-full"
-                src={linkedinimage}
+                src={urlFor(pageInfo?.heroImage).url()}
                 alt="LinkedIn Headshot"
                 width={160} // Set the desired width of the image
                 height={160} // Set the desired height of the image

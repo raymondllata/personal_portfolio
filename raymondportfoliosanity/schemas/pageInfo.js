@@ -24,6 +24,19 @@ export default defineType({
       }
     },
     {
+      name: 'profilePic',
+      title: 'ProfilePic',
+      type: 'image',
+      options: {
+        hotspot: true,
+    },
+  },
+  {
+    name: 'backgroundInformation',
+    title: 'BackgroundInformation',
+    type: 'string',
+  }, 
+    {
       name: 'phoneNumber',
       title: 'PhoneNumber',
       type: 'string',
