@@ -32,7 +32,7 @@ export default function About({ pageInfo }: Props) {
         <Image
           src={urlFor(pageInfo?.profilePic).url()}
           alt="LinkedIn Headshot"
-          className="rounded-full w-full h-full md:rounded-lg"
+          className="rounded-full w-full h-full md:rounded-lg object-cover"
           layout="fill" // Make the image fill its container
         />
       </div>

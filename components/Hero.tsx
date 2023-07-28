@@ -15,8 +15,8 @@ export default function Hero({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
             `Hi, my name's ${pageInfo?.name}`, 
-            "I love to build",
-            "<BlankText />",
+            "I_love_to_build_cool_projects.py",
+            "<Let's Connect!/>",
         ],
         loop: true,
         delaySpeed: 2000,
@@ -34,6 +34,7 @@ export default function Hero({ pageInfo }: Props) {
                 height={160} // Set the desired height of the image
                 layout="fixed" // Use the "fixed" layout
                 objectFit="cover" // Adjust the objectFit property if needed
+                objectPosition={'center bottom'}
             />
         </div>
         <div className = "z-10">
