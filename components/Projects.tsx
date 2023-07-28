@@ -22,7 +22,7 @@ export default function Projects({ projects }: Props) {
         scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7Ab0A]/80">
             {projects?.map((project, i) => (
                 <div 
-                
+                key={project?._id}
                 className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                     <motion.img
                         style={{ width: 'auto', height: '300px' }}

@@ -21,7 +21,8 @@
     "paths": {
       "@/*": [
         "./*"
-      ]
+      ],
+      "next-sanity/studio/metadata": ["./node_modules/next-sanity/studio/metadata"],
     }
   },
   "include": [
