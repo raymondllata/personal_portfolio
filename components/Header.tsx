@@ -33,8 +33,10 @@ export default function Header({ socials }: Props) {
                 <SocialIcon 
                 key={ social._id }
                 url={social.url}
-                fgColor='gray'
+                fgColor='#806B80'
                 bgColor='transparent'
+                target="_blank"
+                className='pulse-effect'   
             />
             ))}
         
@@ -52,14 +54,14 @@ export default function Header({ socials }: Props) {
             scale: 1
         }}
         transition={{ duration: 1.5 }}
-        className='flex flex-row items-center text-grey-300 cursor-pointer'>
+        className='flex flex-row items-center text-color cursor-pointer pulse-effect'>
             <SocialIcon 
                 className="cursor-pointer"
                 network="email"
-                fgColor='gray'
+                fgColor='#806B80'
                 bgColor='transparent'
             />
-            <p className="uppercase hidden md:inline-flex text-sm text-gray-400">Get in Touch</p>
+            <p className="uppercase hidden md:inline-flex text-sm text-color">Get in Touch</p>
         </motion.div>
         </Link>
     </header>

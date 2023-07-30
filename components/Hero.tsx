@@ -16,7 +16,7 @@ export default function Hero({ pageInfo }: Props) {
         words: [
             `Hi, my name's ${pageInfo?.name}`, 
             "I_love_to_build_cool_projects.py",
-            "<Let's Connect!/>",
+            "<Let's Chat/>",
         ],
         loop: true,
         delaySpeed: 2000,
@@ -38,15 +38,15 @@ export default function Hero({ pageInfo }: Props) {
             />
         </div>
         <div className = "z-10">
-            <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]"> Software Engineer</h2>
-            <h1 className="relative text-5xl lg:text-6xl fond-semibold scroll-px-10">
+            <h2 className="text-sm uppercase text-color pb-2 tracking-[15px]"> Software Engineer</h2>
+            <h1 className="relative text-5xl lg:text-6xl fond-semibold scroll-px-10" style={{ display: 'block' }}>
                 <span>{text}</span>
-                <Cursor cursorColor='#F7AB0A' />
+                <Cursor cursorColor='#fa236b' />
             </h1>
 
-            <div className="pt-5">
+            <div className="pt-5 text-color flex gap-5 justify-center">
                 <Link href="#about">
-                    <button className="heroButton">About</button>
+                    <button className="heroButton pulse-effect">About</button>
                 </Link>
                 <Link href="#experience">
                     <button className="heroButton">Experience</button>

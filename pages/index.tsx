@@ -31,8 +31,8 @@ type Props  = {
 //export default function Home() {
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
-    <div className="bg-customGray-800 text-white h-screen snap-y snap-mandatory
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7Ab0A]/80">
+    <div className="gradient-bg text-white h-screen snap-y snap-mandatory
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#fa236b]/40">
       <Head>
         <title>{pageInfo?.name} - Portfolio</title>
       </Head>
@@ -70,7 +70,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       <Link href='#hero'> 
       <footer className='sticky bottom-5 w-full cursor-pointer'>
       <div className="flex items-center justify-center">
-        <HomeIcon className="h-10 w-10  text-[#F7AB0A]/40 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"/></div>
+        <HomeIcon className="h-10 w-10  text-[#806B80]/40 rounded-full filter hover:text-[#fa236b]/40 cursor-pointer pulse-effect"/></div>
       </footer>
       </Link>
     </div>

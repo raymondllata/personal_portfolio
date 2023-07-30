@@ -9,7 +9,7 @@ type Props = { experience: Experience };
 export default function ExperienceCard({ experience }: Props) {
   return (
     <article className=" flex drop-shadow-xl flex-col rounded-3xl items-center space-y-0 flex-shrink-0 w-80  md:w-[700px] xl:w-[800px] snap-center 
-    bg-[#292929] p-5 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    gradient-bg-experience p-5 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -49,14 +49,14 @@ export default function ExperienceCard({ experience }: Props) {
             alt=""
           />
         </div>
-        <p className="uppercase py-2 md:py-5 text-gray-500 text-sm md:text-lg">
+        <p className="uppercase py-2 md:py-5 text-[#806B80] text-sm md:text-lg">
           {new Date(experience?.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"
             : new Date(experience?.dateEnded).toDateString()}
         </p>
       </div>
-      <ul className="list-disc space-y-4 ml-5 text-md h-96 pr-5 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
+      <ul className="list-disc space-y-4 ml-5 text-md h-96 pr-5 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#fa236b]/80">
         {experience?.points.map((point, i) => (
           <li key={i}>
             <div style={{ overflowWrap: "break-word" }}>{point}</div>

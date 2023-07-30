@@ -14,12 +14,12 @@ export default function Projects({ projects }: Props) {
     whileInView={{ opacity: 1}}
     transition={{ duration: 1.5}}  
     className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 test-2xl"> 
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-[#806B80] test-2xl"> 
         Projects 
         </h3>
 
         <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 
-        scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7Ab0A]/80">
+        scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#fa236b]/80">
             {projects?.map((project, i) => (
                 <div 
                 key={project?._id}
@@ -36,13 +36,13 @@ export default function Projects({ projects }: Props) {
                         src={urlFor(project.image).url()} alt="" />
                 <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                     <h4 className="text-4xl font-semibold text-center">
-                        <span className='underline decoration-[#F7AB0A]/50'>Project {i + 1} of {projects.length}:</span> {project?.title}
+                        <span className='underline decoration-[#fa236b]/50'>Project {i + 1} of {projects.length}:</span> {project?.title}
                     </h4>
                     <div className="flex items-center space-x-2 justify-center ">
                 {project?.technologies.map((technology) => (
                   <img
                     key={technology._id}
-                    className="h-10 w-10 border-2 border-gray-500 rounded-full object-cover"
+                    className="h-10 w-10 border-2 border-[#806B80] rounded-full object-cover"
                     src={urlFor(technology?.image).url()}
                     alt=""
                   />
@@ -57,8 +57,8 @@ export default function Projects({ projects }: Props) {
 
         </div>
 
-        <div className='w-full absolute top-[30%] bg-[#F7AB0A] bg-opacity-10 left-0 h-[500px] -skew-y-12' />
-
+        <div className='w-full absolute top-[30%] gradient-bg-decoration bg-opacity-10 left-0 h-[500px] -skew-y-12' />
+        <div className='w-full absolute top-[30%] gradient-bg-decoration bg-opacity-10 left-0 h-[500px] skew-y-12' />
         
     </motion.div>
   )

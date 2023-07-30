@@ -5,15 +5,51 @@
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 
-    transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40
+    @apply px-6 py-2 border border-[#806B80] rounded-full uppercase text-xs tracking-widest text-color
+    transition-all hover:border-[#fa236b]/40 hover:text-[#fa236b]/40
   }
 
   .contactInput {
     @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424]
-    text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7Ab0A]/40
+    text-color placeholder-[#806B80] transition-all focus:border-[#fa236b]/40 focus:text-[#fa236b]/40 hover:border-[#fa236b]/40
     
   }
+}
+.gradient-bg {
+  background-image: radial-gradient(circle, rgb(46, 26, 71), rgb(13, 1, 29));
+  /* Replace #f06 and #9f9 with the colors you want for the gradient */
+  /* You can use color names, hexadecimal, RGB, HSL, etc. */
+}
+/*462b46*/
+.gradient-bg-experience {
+  background-image: linear-gradient(to bottom right, rgb(70, 43, 70), rgb(82, 59, 100));
+  /* Replace #f06 and #9f9 with the colors you want for the gradient */
+  /* You can use color names, hexadecimal, RGB, HSL, etc. */
+  
+}
+.gradient-bg-decoration {
+  background-image: linear-gradient(to bottom right, rgba(250, 35, 107, 0.2), rgba(239, 35, 250, 0.1));
+  
+  /* Replace #f06 and #9f9 with the colors you want for the gradient */
+  /* You can use color names, hexadecimal, RGB, HSL, etc. */
+  
+}
+.text-color {
+  color: rgb(127, 107, 128);
+}
+.background-color {
+  background-color: rgb(15, 5, 28);
+}
+
+/* styles.css (or your preferred CSS file) */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.pulse-effect:hover {
+  animation: pulse 1s infinite;
 }
 /* :root {
   --foreground-rgb: 0, 0, 0;

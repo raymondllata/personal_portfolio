@@ -23,28 +23,28 @@ function ContactMe({}: Props) {
       }
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 test-2xl"> 
+         <h3 className="absolute top-24 uppercase tracking-[20px] text-[#806B80] test-2xl"> 
          Contact
         </h3>
 
         <div className='flex flex-col space-y-10'>
             <h4 className='text-4xl font-semibold text-center'>
                 I have got just what you need. {" "}
-                <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
+                <span className="decoration-[#fa236b]/50 underline">Lets Talk.</span>
 
             </h4>
             <div className='space-y-10'>
                 <div className='flex items-center space-x-5 justify-center'>
-                    <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
+                    <PhoneIcon className='text-[#fa236b] h-7 w-7 animate-pulse'/>
                     <p className='text-2xl'>+17148566105</p>
                 </div>
                 <div className='flex items-center space-x-5 justify-center'>
-                    <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
+                    <EnvelopeIcon className='text-[#fa236b] h-7 w-7 animate-pulse'/>
                     <p className='text-2xl'>rllata@stanford.edu</p>
                 </div>
                 <div className='flex items-center space-x-5 justify-center'>
-                    <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                    <p className='text-2xl'>71 Diamond Flats</p>
+                    <MapPinIcon className='text-[#fa236b] h-7 w-7 animate-pulse'/>
+                    <p className='text-2xl'>Stanford University</p>
                 </div>
             </div>
 
@@ -58,7 +58,7 @@ function ContactMe({}: Props) {
                 <input {...register('subject')} placeholder='Subject' className='contactInput' type="text" />
                 <textarea {...register('message')}placeholder='Message' className='contactInput' />
 
-                <button className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg'>Submit</button>
+                <button className='bg-[#fa236b] py-5 px-10 rounded-md text-black font-bold text-lg'>Submit</button>
             </form>
 
         </div>
